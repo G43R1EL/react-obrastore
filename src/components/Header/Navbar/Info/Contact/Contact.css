@@ -1,0 +1,8 @@
+.info__container span {
+    color: var(--poppy__color);
+    font-weight: 700;
+}
+
+.info__container p {
+    padding-bottom: .5rem;
+}

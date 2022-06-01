@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --black__color: #000000;
+  --poppy__color: #F8C10F;
+  --cultured__color: #F4F4F4;
+  --eerie__color: #202020;
+  --quicksand__font: 'Quicksand', sans-serif;;
+  --raleway__font: 'Raleway', sans-serif;; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--quicksand__font);
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}

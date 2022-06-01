@@ -1,0 +1,11 @@
+header {
+    background-color: var(--eerie__color);
+    color: var(--cultured__color);
+}
+
+header .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: .5rem;
+}

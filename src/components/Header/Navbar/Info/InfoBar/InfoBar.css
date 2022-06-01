@@ -1,0 +1,7 @@
+.info__container ul {
+    display: flex;
+}
+
+.info__container ul li {
+    padding-left: 1rem;
+}
