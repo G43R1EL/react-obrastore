@@ -1,11 +1,12 @@
 import Container from '../Container/Container';
 import './Main.css';
+import ItemListContainer from './Products/ItemListContainer/ItemListContainer';
 
 function Main () {
     return (
         <>
         <main>
-            <Container content={<h1>Main Works!</h1>} />;
+            <Container content={<ItemListContainer />} />;
         </main>
         </>
     );
