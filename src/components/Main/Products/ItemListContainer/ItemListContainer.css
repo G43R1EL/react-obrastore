@@ -1,0 +1,12 @@
+.itemList__container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 0;
+}
+
+@media screen and (min-width: 1200px) {
+    .itemList__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

@@ -3,5 +3,11 @@
 }
 
 .info__container ul li {
-    padding-left: 1rem;
+    padding: .5rem; 
+}
+
+@media screen and (min-width: 1200px) {
+    .info__container ul li {
+        padding: 0 0 0 1rem;
+    }
 }

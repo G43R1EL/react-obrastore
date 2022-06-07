@@ -5,7 +5,15 @@ header {
 
 header .container {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     padding: .5rem;
+}
+
+@media screen and (min-width: 1200px) {
+    header .container {
+        flex-direction: row;
+        align-items: flex-end;
+    }
 }

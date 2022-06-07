@@ -1,4 +1,4 @@
-import Container from '../Container/Container';
+import Container from '../Common/Container/Container';
 import './Footer.css';
 
 function Footer () {

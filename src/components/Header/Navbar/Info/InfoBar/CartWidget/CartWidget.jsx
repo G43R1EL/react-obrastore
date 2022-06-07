@@ -1,5 +1,5 @@
 import './CartWidget.css';
-import NavLink from '../../../Nav/NavLink/NavLink';
+import NavLink from '../../../../../Common/NavLink/NavLink';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 function CartWidget () {
