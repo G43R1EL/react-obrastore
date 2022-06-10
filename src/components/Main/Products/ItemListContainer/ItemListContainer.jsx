@@ -1,19 +1,34 @@
+import { useEffect, useState } from 'react';
+import { getFetch } from '../../../../helpers/getFetch';
+import ItemList from './ItemList/ItemList';
 import './ItemListContainer.css';
-import ProductCard from './ProductCard/ProductCard';
 
 function ItemListContainer () {
-    function onAdd(productId, quantity) {
-        console.log('Se estan agregando ' + quantity + ' -> ' + productId + ' al carrito...');
-    }
+    const [itemsList, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(()=>{
+        getFetch()
+            .then((res)=>{
+                setItems(res);
+            })
+            .catch(err=>{
+                console.log(err);
+            })
+            .finally(()=>{
+                setLoading(false);
+            });
+    }, []);
 
     return (
         <>
-            <div className="itemList__container">
-                <ProductCard productId="10001" title="Product title" stock={5} onAdd={onAdd} />
-                <ProductCard productId="10002" title="Product title" stock={5} onAdd={onAdd} />
-                <ProductCard productId="10003" title="Product title" stock={5} onAdd={onAdd} />
-                <ProductCard productId="10004" title="Product title" stock={5} onAdd={onAdd} />
-            </div>
+            { loading ?
+                <h1>Cargando...</h1>
+            :
+                <div className="itemList__container">
+                    <ItemList items={itemsList}/>
+                </div>
+            }
         </>
     );
 }
