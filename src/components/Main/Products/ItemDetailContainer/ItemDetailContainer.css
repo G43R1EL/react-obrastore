@@ -1,0 +1,15 @@
+.ItemDetail__container {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    background-color: var(--eerie__color);
+}
+
+@media screen and (min-width: 1200px) {
+    .ItemDetail__container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+}

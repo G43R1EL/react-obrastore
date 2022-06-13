@@ -1,12 +1,12 @@
 import placeholder from '../../../../../../../assets/No-Image-Placeholder.svg';
 import './ItemImage.css';
 
-function ItemImage ({image}) {
+function ItemImage ({thumb}) {
     return (
         <>
             {
-                image
-                    ? <img src={image} alt='Imagen del producto' className='productCard__image' />
+                thumb
+                    ? <img src={thumb} alt='Imagen del producto' className='productCard__image' />
                     : <img src={placeholder} alt='Imagen del producto' className='productCard__image' />
             }
         </>

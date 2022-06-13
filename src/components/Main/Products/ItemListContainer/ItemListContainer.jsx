@@ -12,7 +12,7 @@ function ItemListContainer () {
             .then((res)=>{
                 setItems(res);
             })
-            .catch(err=>{
+            .catch((err)=>{
                 console.log(err);
             })
             .finally(()=>{
@@ -23,7 +23,7 @@ function ItemListContainer () {
     return (
         <>
             { loading ?
-                <h1>Cargando...</h1>
+                <h1>Cargando lista de items...</h1>
             :
                 <div className="itemList__container">
                     <ItemList items={itemsList}/>

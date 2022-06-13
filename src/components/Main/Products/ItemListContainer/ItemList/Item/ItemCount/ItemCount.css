@@ -1,3 +1,7 @@
+.productCard__itemCount {
+    align-self: flex-end;
+}
+
 .productCard__itemCount .productCard__itemCount__bar {
     display: flex;
 }

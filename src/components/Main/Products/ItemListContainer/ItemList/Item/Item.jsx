@@ -3,13 +3,14 @@ import './Item.css';
 import ItemImage from './ItemImage/ItemImage';
 import ItemInfo from './ItemInfo/ItemInfo';
 
-function Item({productId, title, description, price, stock, image, onAdd}) {
+function Item({item, onAdd}) {
+    const {id,thumb,title,description,price,stock} = item;
     return (
         <>
-            <div className="productCard__container" id={productId}>
-                <ItemImage image={image} />
+            <div className="productCard__container" id={id}>
+                <ItemImage thumb={thumb} />
                 <ItemInfo title={title} description={description} price={price} />
-                <ItemCount stock={stock} initial={1} onAdd={onAdd} productId={productId} />
+                <ItemCount stock={stock} initial={1} onAdd={onAdd} id={id} />
             </div>
         </>
     );
