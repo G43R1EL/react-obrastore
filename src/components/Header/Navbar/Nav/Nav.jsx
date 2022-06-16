@@ -1,16 +1,26 @@
 import './Nav.css';
-import NavLink from '../../../Common/NavLink/NavLink';
+import { NavLink } from 'react-router-dom';
 
 function Nav () {
     return (
         <>
             <nav>
                 <ul>
-                    <NavLink name="Inicio" href="home" />
-                    <NavLink name="Sobre nosotros" href="about" />
-                    <NavLink name="Productos" href="products" />
-                    <NavLink name="Servicios" href="services" />
-                    <NavLink name="Contacto" href="contact" />
+                    <li>
+                        <NavLink to='' className={({isActive})=>isActive?'link__active':undefined}>Inicio</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='about' className={({isActive})=>isActive?'link__active':undefined}>Sobre nosotros</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='products' className={({isActive})=>isActive?'link__active':undefined}>Productos</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='services' className={({isActive})=>isActive?'link__active':undefined}>Servicios</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='contact' className={({isActive})=>isActive?'link__active':undefined}>Contacto</NavLink>
+                    </li>
                 </ul>
             </nav>
         </>

@@ -1,0 +1,17 @@
+.ItemList__filters {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: filters;
+}
+
+.ItemList__filters ul {
+    display: flex;
+}
+
+.ItemList__filters li {
+    padding: 0 .25rem;
+}
+
+.category__active {
+    font-weight: bold;
+}

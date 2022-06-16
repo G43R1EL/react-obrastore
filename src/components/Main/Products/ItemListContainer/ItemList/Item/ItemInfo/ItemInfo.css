@@ -1,7 +1,13 @@
 .productCard__title {
     color: var(--poppy__color);
     font-size: 1.25rem;
-    padding: .5rem 0;
+    padding: .5rem 0 0 0;
+}
+
+.productCard__category {
+    color: var(--poppy__color);
+    font-size: .75rem;
+    padding: 0 0 .5rem 0;
 }
 
 .productCard__description {

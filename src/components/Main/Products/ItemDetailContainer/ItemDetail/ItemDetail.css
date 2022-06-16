@@ -9,6 +9,11 @@
     color: var(--poppy__color);
 }
 
+.ItemDetail__category {
+    font-size: .75rem;
+    padding: 0 0 .5rem 0;
+}
+
 .ItemDetail__information p {
     color: var(--cultured__color);
 }

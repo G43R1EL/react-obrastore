@@ -1,11 +1,14 @@
 import './CartWidget.css';
-import NavLink from '../../../../../Common/NavLink/NavLink';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function CartWidget () {
     return (
-        <>
-            <NavLink name="Carrito" href="cart" icon={faCartShopping} />
+        <>  
+            <li>
+                <Link to='cart'><FontAwesomeIcon icon={faCartShopping} /> Carrito</Link>
+            </li>
         </>
     );
 }

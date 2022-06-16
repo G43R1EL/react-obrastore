@@ -2,11 +2,13 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "filters filters";
     padding: 1rem 0;
 }
 
 @media screen and (min-width: 1200px) {
     .itemList__container {
         grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "filters filters filters filters";
     }
 }

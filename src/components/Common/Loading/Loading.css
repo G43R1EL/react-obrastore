@@ -1,0 +1,20 @@
+.loading {
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+.loading::before {
+    content: '';
+    width: 2px;
+    animation: blinkCursor;
+    background-color: var(--errie__color);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@keyframes blinkCursor {
+    
+}

@@ -1,15 +1,15 @@
-import ItemCount from './ItemCount/ItemCount';
+import ItemCount from '../../../ItemCount/ItemCount';
 import './Item.css';
 import ItemImage from './ItemImage/ItemImage';
 import ItemInfo from './ItemInfo/ItemInfo';
 
 function Item({item, onAdd}) {
-    const {id,thumb,title,description,price,stock} = item;
+    const {id,thumb,title, category,description,price,stock} = item;
     return (
         <>
             <div className="productCard__container" id={id}>
-                <ItemImage thumb={thumb} />
-                <ItemInfo title={title} description={description} price={price} />
+                <ItemImage thumb={thumb} id={id} />
+                <ItemInfo title={title} category={category} description={description} price={price} id={id} />
                 <ItemCount stock={stock} initial={1} onAdd={onAdd} id={id} />
             </div>
         </>

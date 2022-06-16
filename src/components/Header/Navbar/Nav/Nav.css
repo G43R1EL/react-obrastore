@@ -6,6 +6,11 @@ header nav ul {
     padding: 1rem 0;
 }
 
+.link__active {
+    font-weight: bold;
+    color: var(--poppy__color);
+}
+
 @media screen and (min-width: 1200px) {
     header nav ul {
         flex-direction: row;

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { getItem } from '../../../../helpers/getFetch';
+import Loading from '../../../Common/Loading/Loading';
 import ItemDetail from './ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
 import ItemImages from './ItemImages/ItemImages';
@@ -9,8 +11,10 @@ function ItemDetailContainer () {
     const [pictures, setPictures] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const {productId} = useParams();
+
     useEffect(()=>{
-        getItem('10001')
+        getItem(productId)
             .then((res)=>{
                 setItem(res);
                 setPictures(res.pictures)
@@ -21,12 +25,12 @@ function ItemDetailContainer () {
             .finally(()=>{
                 setLoading(false)
             });
-    }, []);
+    }, [productId]);
 
     return (
         <>
             { loading ?
-                <h1>Cargando item...</h1>
+                <Loading />
             :
                 <div className='ItemDetail__container'>
                     <ItemImages pictures={pictures} />
