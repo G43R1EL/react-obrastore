@@ -7,6 +7,7 @@
 }
 
 .productCard__itemCount button {
+    font-weight: bold;
     background-color: var(--poppy__color);
     padding: .5rem;
     border: none;
