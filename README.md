@@ -5,6 +5,7 @@ Requisitos: Sitio web de 6 secciones (home, about, products, services, contact, 
 -> Desarrollar carrito de compras.
 
 >> Scripts
+
     Install:
     - npm install
     Live:
