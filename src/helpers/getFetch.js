@@ -7,7 +7,7 @@ let products = [
         price: 9500,
         stock: 5,
         thumb: '/assets/products/thumbs/chalten.webp',
-        pictures: ['../assets/products/gallery/chalten_01.webp'],
+        pictures: ['/assets/products/gallery/chalten_01.webp'],
     },
     {
         id: '10002',
@@ -17,7 +17,7 @@ let products = [
         price: 13500,
         stock: 3,
         thumb: '/assets/products/thumbs/pehuen.webp',
-        pictures: ['../assets/products/gallery/pehuen_01.webp','assets/products/gallery/pehuen_02.webp'],
+        pictures: ['/assets/products/gallery/pehuen_01.webp','/assets/products/gallery/pehuen_02.webp'],
     },
     {
         id: '10003',
@@ -27,7 +27,7 @@ let products = [
         price: 11000,
         stock: 10,
         thumb: '/assets/products/thumbs/split.webp',
-        pictures: ['../assets/products/gallery/split_01.webp'],
+        pictures: ['/assets/products/gallery/split_01.webp'],
     },
     {
         id: '10004',
@@ -37,7 +37,7 @@ let products = [
         price: 15000,
         stock: 6,
         thumb: '/assets/products/thumbs/volcan.webp',
-        pictures: ['../assets/products/gallery/volcan_01.webp'],
+        pictures: ['/assets/products/gallery/volcan_01.webp'],
     },
 ];
 
