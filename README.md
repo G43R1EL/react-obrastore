@@ -24,5 +24,8 @@ Requisitos: Sitio web de 6 secciones (home, about, products, services, contact, 
     React Router Dom:
     - react-router-dom v6.3.0
 
+    GitHub Pages:
+    - gh-pages v4.0.0
+
 
 2022 >> Nelson Gabriel Hernández >> Coderhouse ReactJS 31200
