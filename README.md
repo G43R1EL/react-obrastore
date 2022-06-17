@@ -11,7 +11,7 @@ Requisitos: Sitio web de 6 secciones (home, about, products, services, contact, 
     Live:
     - npm start
     Build:
-    - npm build
+    - npm run build
 
 >> Librerias utilizadas:
 
