@@ -10,7 +10,7 @@ function ItemInfo ({title, category, description, price, id}) {
     return (
         <>
             
-            <Link to={'/products/' + id}><h3 className='productCard__title'>{title}</h3></Link>
+            <Link to={`/products/${id}`}><h3 className='productCard__title'>{title}</h3></Link>
             <p className='productCard__category'>Categoría: {category}</p>
             <p className='productCard__description'>{description}</p>
             <p className='productCard__price'>{pesoArg.format(price)+'-'}</p>

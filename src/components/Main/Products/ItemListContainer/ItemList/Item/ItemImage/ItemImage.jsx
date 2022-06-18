@@ -5,7 +5,7 @@ import './ItemImage.css';
 function ItemImage ({thumb, id}) {
     return (
         <>
-            <Link to={'/products/' + id}>
+            <Link to={`/products/${id}`}>
             {
                 thumb
                     ? <img src={thumb} alt='Imagen del producto' className='productCard__image' />

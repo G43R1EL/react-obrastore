@@ -6,6 +6,7 @@
 
 .ItemList__filters ul {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .ItemList__filters li {
