@@ -52,7 +52,7 @@ export const getFetch = () => {
 export const getItem = (id) => {
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            resolve(products.filter((item)=>{return item.id===id})[0]);
+            resolve(products.find(item=>item.id===id));
         }, 500);
     });
 };
