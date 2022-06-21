@@ -1,0 +1,7 @@
+.ItemList__filters {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: filters;
+    background-color: var(--eerie__color);
+    padding: .5rem;
+}

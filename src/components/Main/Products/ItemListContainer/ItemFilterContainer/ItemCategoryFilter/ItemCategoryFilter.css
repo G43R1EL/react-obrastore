@@ -1,0 +1,22 @@
+#ItemFilter__category {
+    background-color: var(--poppy__color);
+    padding: .25rem;
+}
+
+#ItemFilter__category label {
+    font-size: .85rem;
+    font-weight: bold;
+}
+#ItemFilter__category select {
+    margin-left: .25rem;
+    background-color: var(--poppy__color);
+    border: none;
+}
+
+#ItemFilter__category select:focus-within {
+    border: none;
+}
+
+#ItemFilter__category select:focus-visible {
+    border: none;
+}

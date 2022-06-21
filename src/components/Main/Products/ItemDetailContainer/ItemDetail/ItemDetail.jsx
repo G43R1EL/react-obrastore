@@ -1,13 +1,21 @@
 import { onAdd } from '../../../../../helpers/onAdd';
 import ItemCount from '../../ItemCount/ItemCount';
+import { useState } from 'react';
 import './ItemDetail.css';
+import GoToCart from '../../GoToCart/GoToCart';
 
 function ItemDetail ({item}) {
+    const [finalizar, setFinalizar] = useState(false);
     const {id,title,category,description,price,stock} = item;
     let pesoArg = Intl.NumberFormat('es-AR', {
         style:'currency',
         currency:'ARS',
     })
+
+    function addItem (id, count) {
+        onAdd(id, count);
+        setFinalizar(true);
+    }
 
     return (
         <>
@@ -21,7 +29,11 @@ function ItemDetail ({item}) {
                     <div>
                         <h2>{pesoArg.format(price)+'-'}</h2>
                     </div>
-                    <ItemCount id={id} stock={stock} initial={1} onAdd={onAdd} mode={'full'} />
+                    {
+                        finalizar
+                        ? <GoToCart />
+                        : <ItemCount id={id} stock={stock} initial={1} onAdd={addItem} mode={'full'} />
+                    }
                 </div>
             </div>
         </>

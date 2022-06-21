@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCategory, getFetch } from '../../../../helpers/getFetch';
 import Loading from '../../../Common/Loading/Loading';
-import ItemFilter from './ItemFilter/ItemFilter';
+import ItemFilterContainer from './ItemFilterContainer/ItemFilterContainer';
 import ItemList from './ItemList/ItemList';
 import './ItemListContainer.css';
 
@@ -43,7 +43,7 @@ function ItemListContainer () {
                 <Loading />
             :
                 <div className="itemList__container">
-                    <ItemFilter />
+                    <ItemFilterContainer />
                     <ItemList items={itemsList}/>
                 </div>
             }
