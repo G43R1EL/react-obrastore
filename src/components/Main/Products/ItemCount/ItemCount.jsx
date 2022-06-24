@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartContext } from '../../../../context/CartContext/CartContext';
+import { getItem } from '../../../../helpers/getFetch';
 import './ItemCount.css';
 
-function ItemCount ({stock, initial, onAdd, id, mode}) {
+function ItemCount ({stock, initial, id, mode, onAdd}) {
     const [count, setCount] = useState(initial);
+    const { addItem } = useContext(CartContext);
 
     function plusCount () {
         if (count < stock) {
@@ -24,7 +27,14 @@ function ItemCount ({stock, initial, onAdd, id, mode}) {
     }
 
     function addToCart() {
-        onAdd(id, count);
+        getItem(id)
+            .then((product)=>{
+                if (onAdd) { onAdd() };
+                addItem(product, count);
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
     }
 
     return (

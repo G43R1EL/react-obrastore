@@ -3,15 +3,18 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
+import { CartContextProvider } from './context/CartContext/CartContext';
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Header />
-        <Main />
-        <Footer />
-      </BrowserRouter>
+      <CartContextProvider>
+        <BrowserRouter>
+          <Header />
+          <Main />
+          <Footer />
+        </BrowserRouter>
+      </CartContextProvider>
     </>
   );
 }

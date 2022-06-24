@@ -1,4 +1,3 @@
-import { onAdd } from '../../../../../helpers/onAdd';
 import ItemCount from '../../ItemCount/ItemCount';
 import { useState } from 'react';
 import './ItemDetail.css';
@@ -12,8 +11,7 @@ function ItemDetail ({item}) {
         currency:'ARS',
     })
 
-    function addItem (id, count) {
-        onAdd(id, count);
+    function addItem () {
         setFinalizar(true);
     }
 
@@ -32,7 +30,7 @@ function ItemDetail ({item}) {
                     {
                         finalizar
                         ? <GoToCart />
-                        : <ItemCount id={id} stock={stock} initial={1} onAdd={addItem} mode={'full'} />
+                        : <ItemCount id={id} stock={stock} initial={1} mode={'full'} onAdd={addItem} />
                     }
                 </div>
             </div>

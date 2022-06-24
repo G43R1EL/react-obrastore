@@ -43,24 +43,18 @@ let products = [
 
 export const getFetch = () => {
     return new Promise((resolve)=>{
-        setTimeout(()=>{
-            resolve(products);
-        }, 500);
+        resolve(products);
     });
 };
 
 export const getItem = (id) => {
     return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            resolve(products.find(item=>item.id===id));
-        }, 500);
+        resolve(products.find(item=>item.id===id));
     });
 };
 
 export const getCategory = (category) => {
     return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            resolve(products.filter((item)=>{return item.category===category}));
-        }, 500);
+        resolve(products.filter((item)=>{return item.category===category}));
     });
 };

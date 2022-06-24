@@ -1,6 +1,5 @@
 import './ItemList.css';
 import Item from './Item/Item';
-import { onAdd } from '../../../../../helpers/onAdd';
 
 function ItemList({items}) {
     return (
@@ -9,7 +8,6 @@ function ItemList({items}) {
                 <Item
                     key={item.id}
                     item={item}
-                    onAdd={onAdd}
                 />
             ) }
         </>
