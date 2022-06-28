@@ -1,0 +1,8 @@
+.squareButton {
+    background-color: #ff4444;
+    padding: .5rem;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}

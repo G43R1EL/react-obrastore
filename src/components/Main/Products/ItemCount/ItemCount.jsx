@@ -1,11 +1,9 @@
-import { useContext, useState } from 'react';
-import { CartContext } from '../../../../context/CartContext/CartContext';
+import { useState } from 'react';
 import { getItem } from '../../../../helpers/getFetch';
 import './ItemCount.css';
 
-function ItemCount ({stock, initial, id, mode, onAdd}) {
+function ItemCount ({stock, initial, id, onAdd}) {
     const [count, setCount] = useState(initial);
-    const { addItem } = useContext(CartContext);
 
     function plusCount () {
         if (count < stock) {
@@ -29,8 +27,8 @@ function ItemCount ({stock, initial, id, mode, onAdd}) {
     function addToCart() {
         getItem(id)
             .then((product)=>{
-                if (onAdd) { onAdd() };
-                addItem(product, count);
+                product = {...product, count}
+                onAdd(product);
             })
             .catch((err)=>{
                 console.log(err);
@@ -40,17 +38,11 @@ function ItemCount ({stock, initial, id, mode, onAdd}) {
     return (
         <>
             <div className='productCard__itemCount'>
-                {
-                    mode==='full' ?
-                        <div className="productCard__itemCount__bar">
-                        <button className='squareButton' onClick={minusCount}>-</button>
-                        <input type="text" name="quantity" id="quantity" value={count} onChange={changeHndlr} />
-                        <button className='squareButton' onClick={plusCount}>+</button>
-                        </div>
-                    :
-                        ''
-                }
-                
+                <div className="productCard__itemCount__bar">
+                    <button className='squareButton' onClick={minusCount}>-</button>
+                    <input type="text" name="quantity" id="quantity" value={count} onChange={changeHndlr} />
+                    <button className='squareButton' onClick={plusCount}>+</button>
+                </div>  
                 <button className='addButton' onClick={addToCart}>Agregar al carro</button>
             </div>
         </>

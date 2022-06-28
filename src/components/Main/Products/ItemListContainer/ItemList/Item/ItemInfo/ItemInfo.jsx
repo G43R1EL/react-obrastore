@@ -14,6 +14,7 @@ function ItemInfo ({title, category, description, price, id}) {
             <p className='productCard__category'>Categoría: {category}</p>
             <p className='productCard__description'>{description}</p>
             <p className='productCard__price'>{pesoArg.format(price)+'-'}</p>
+            <Link to={`/products/${id}`}><button className='productCard__button'>Ver más</button></Link>
         </>
     )
 }

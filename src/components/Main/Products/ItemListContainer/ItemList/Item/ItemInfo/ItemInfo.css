@@ -19,3 +19,11 @@
     text-align: right;
     padding: .5rem 0;
 }
+
+.productCard__button {
+    font-weight: bold;
+    background-color: var(--poppy__color);
+    padding: .5rem 2rem;
+    border: none;
+    cursor: pointer;
+}
