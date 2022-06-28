@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
 import './RemoveItemBtn.css';
-import { CartContext } from '../../../../context/CartContext/CartContext';
+import { CartContext } from '../../../../../context/CartContext/CartContext';
 
 function RemoveItemBtn ({id}) {
     const { removeItem } = useContext(CartContext);
