@@ -1,6 +1,6 @@
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getItem } from '../../../../helpers/getFetch';
 import Loading from '../../../Common/Loading/Loading';
 import ItemDetail from './ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
@@ -10,21 +10,21 @@ function ItemDetailContainer () {
     const [item, setItem] = useState([]);
     const [pictures, setPictures] = useState([]);
     const [loading, setLoading] = useState(true);
-
     const {productId} = useParams();
 
     useEffect(()=>{
-        getItem(productId)
+        const db = getFirestore();
+        getDoc(doc(db, 'products', productId))
             .then((res)=>{
-                setItem(res);
-                setPictures(res.pictures)
+                setItem({id:res.id,...res.data()});
+                setPictures(res.data().pictures)
             })
             .catch((err)=>{
                 console.log(err);
             })
             .finally(()=>{
-                setLoading(false)
-            });
+                setLoading(false);
+            })
     }, [productId]);
 
     return (

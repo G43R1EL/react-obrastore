@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import { getItem } from '../../../../helpers/getFetch';
 import './ItemCount.css';
 
-function ItemCount ({stock, initial, id, onAdd}) {
+function ItemCount ({item, initial, onAdd}) {
     const [count, setCount] = useState(initial);
 
     function plusCount () {
-        if (count < stock) {
+        if (count < item.stock) {
             setCount(count + 1);
         }
     }
@@ -19,20 +18,14 @@ function ItemCount ({stock, initial, id, onAdd}) {
 
     function changeHndlr (event) {
         const value = event.target.value; 
-        if (value <= stock && value > 0) {
+        if (value <= item.stock && value > 0) {
             setCount(parseInt(event.target.value));
         }
     }
 
     function addToCart() {
-        getItem(id)
-            .then((product)=>{
-                product = {...product, count}
-                onAdd(product);
-            })
-            .catch((err)=>{
-                console.log(err);
-            })
+        item = {...item, count};
+        onAdd(item);
     }
 
     return (

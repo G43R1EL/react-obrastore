@@ -1,4 +1,4 @@
-import ItemCount from '../../ItemCount/ItemCount';
+import ItemCount from './ItemCount/ItemCount';
 import { useState } from 'react';
 import './ItemDetail.css';
 import GoToCart from '../../GoToCart/GoToCart';
@@ -7,7 +7,7 @@ import { CartContext } from '../../../../../context/CartContext/CartContext';
 
 function ItemDetail ({item}) {
     const [finalizar, setFinalizar] = useState(false);
-    const {id,title,category,description,price,stock} = item;
+    const {title,category,description,price} = item;
     const { addItem } = useContext(CartContext);
     let pesoArg = Intl.NumberFormat('es-AR', {
         style:'currency',
@@ -34,7 +34,7 @@ function ItemDetail ({item}) {
                     {
                         finalizar
                         ? <GoToCart />
-                        : <ItemCount id={id} stock={stock} initial={1} mode={'full'} onAdd={onAdd} />
+                        : <ItemCount item={item} initial={1} onAdd={onAdd} />
                     }
                 </div>
             </div>
