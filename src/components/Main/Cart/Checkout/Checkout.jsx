@@ -4,7 +4,7 @@ import { CartContext } from '../../../../context/CartContext/CartContext';
 import './Checkout.css';
 
 function Checkout({cart}) {
-    const [buyer, setBuyer] = useState({name:'', phone:'', email:''});
+    const [buyer, setBuyer] = useState({name:'anonimo', phone:'+54 9 11 4004-0000', email:'anonimo@undominio.com'});
     const {clear} = useContext(CartContext);
 
     function changeHndlr(event) {
