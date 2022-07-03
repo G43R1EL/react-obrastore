@@ -1,0 +1,34 @@
+.cart__checkout {
+    padding: 1rem;
+}
+
+.cart__checkoutForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart__checkoutForm label {
+    margin-bottom: .5rem;
+    color: var(--eerie__color);
+    font-weight: bold;
+}
+
+.cart__checkoutForm input {
+    margin-bottom: 1.5rem;
+    border: none;
+    border-bottom: 1px solid var(--poppy__color);
+    font-size: 1rem;
+}
+
+.cart__checkoutForm input:focus {
+    outline: none;
+}
+
+.cart__checkoutForm button {
+    font-weight: bold;
+    background-color: var(--poppy__color);
+    padding: .5rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}

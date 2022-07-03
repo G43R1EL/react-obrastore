@@ -1,3 +1,7 @@
+.cart__container h2 {
+    margin-bottom: 1rem;
+}
+
 div.cart__empty {
     width: 100%;
     height: 100%;
@@ -12,16 +16,6 @@ div.cart__total {
     text-align: right;
 }
 
-div.cart__empty h2 {
-    margin-bottom: 2rem;
-}
-
-table {
-    width: 100%;
-    text-align: center;
-    font-size: .75rem;
-}
-
 button.cart__button {
     font-weight: bold;
     background-color: var(--poppy__color);
@@ -30,8 +24,25 @@ button.cart__button {
     cursor: pointer;
 }
 
-@media screen and (min-width: 1200px) {
-    table {
-        font-size: 1rem;
-    }   
+.cart__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart__details {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 980px) {
+    .cart__container {
+        flex-direction: row;
+    }
+
+    .cart__details {
+        width: 70%;
+    }
+
+    .cart__checkout {
+        width: 30%;
+    }
 }
