@@ -8,6 +8,7 @@ import ItemListContainer from './Products/ItemListContainer/ItemListContainer';
 import Services from './Services/Services';
 import Contact from './Contact/Contact';
 import Cart from './Cart/Cart';
+import NotFound from '../Common/NotFound/NotFound';
 
 function Main () {
 
@@ -24,6 +25,7 @@ function Main () {
                 <Route path='/services' element={<Container content={<Services />} />} />
                 <Route path='/contact' element={<Container content={<Contact />} />} />
                 <Route path='/cart' element={<Container content={<Cart />} />} />
+                <Route path='*' element={<Container content={<NotFound />} />} />
             </Routes>
         </main>
         </>
